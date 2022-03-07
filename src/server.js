@@ -1,16 +1,19 @@
-const express = require('express') // aqui estamos atribuindo uma função ao express
-const server = express() // aqui estamos executando a função express e jogando para o server
+const express = require('express') // aqui estamos atribuindo uma função ao express ela é uma biblioteca pra criar o servidor
+const server = express() // aqui estamos executando a função express e jogando para o server é o que vai criar as rotas e os caminhos
 const routes = require('./routes')
+server.set('view engine', 'ejs')
 
 //apos isso executar o arquivo com node
 
-// este console log mostra o que esta sendo executado no terminal
+// este console log mostro que esta sendo executado no terminal
 //console.log(server)
 
 //vamos utilizar o use para criar as rotas automaticamente
 //habilitar os arquivos estaticos
 //nós utilizamos o midleware  ( o homem do meio)
 server.use(express.static('public'))
+
+//  motor do EJS
 
 server.use(routes)
 
