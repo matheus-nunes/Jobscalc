@@ -1,10 +1,15 @@
 const express = require('express')
 const routes = express.Router()
 
-// response é responder
-//request é perguntar
-// joguinho de pergunta e resposta
-//const basePath = __dirname + '/views/' // isso aqui serve para encurtar o dir name
+const profile = {
+  name: 'Matheus Nunes',
+  avatar: 'https://avatars.githubusercontent.com/u/37475590?v=4',
+  // Os objetos criados a baixo estão com aspas porque o nome deles te traço -
+  'monthly-budget': 3000.0,
+  'days-per-week': 5,
+  'hours-per-day': 5,
+  'vacation-per-year': 4
+}
 
 const views = __dirname + '/views/'
 
@@ -16,7 +21,7 @@ routes.get('/job/edit', (request, response) =>
   response.render(views + 'job-edit')
 )
 routes.get('/profile', (request, response) =>
-  response.render(views + 'profile')
+  response.render(views + 'profile', { profile })
 )
 
 module.exports = routes
