@@ -2,7 +2,11 @@ const express = require('express') // aqui estamos atribuindo uma função ao ex
 const server = express() // aqui estamos executando a função express e jogando para o server é o que vai criar as rotas e os caminhos
 const routes = require('./routes')
 
-//este aqui de baixo server pra utilizar a teamplate engine
+//usar o request.body
+server.use(express.urlencoded({ extended: true })) //o use eu posso colocar pra habilitar configurações no servidor
+//urlencoded é uma função,
+
+//este aqui de baixo serve pra utilizar a teamplate engine
 server.set('view engine', 'ejs')
 // o EJS SERVE PARA CRIAR UM SERVIDOR EJS
 // O EJS  permite que eu utilize o javscript dentro do
