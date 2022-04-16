@@ -5,14 +5,14 @@ Este projeto foi Utilizado Node: Express, Ejs
 Configuramos o servidor na porta: 3000
 </br>
 
-<p style="background-color:#04d361">
-Realizamos as montagens das rotas:</br>
+<p style="background-color:tomato;">
+Realizamos as montagens das rotas: </p> </br>
 routes.get('/', (request, response) => response.render(views + 'index'))</br>
 // quando for o metodo get no barra. quero que no segundo argumento execute uma função de novo</br>
 routes.get('/job', (request, response) => response.render(views + 'job'))</br>
 routes.post('/job', (request, response) => {</br>
   const lastId = jobs[jobs.length - 1]?.id || 1</br>
-   </p>
+   
   </br>
   </br>
   Utilizamos o motor EJS para poder manipular nosso javascript diretamente dentro da html
