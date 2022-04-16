@@ -4,6 +4,11 @@ Este projeto foi Utilizado Node: Express, Ejs
 </br>
 Configuramos o servidor na porta: 3000
 </br>
+
+<style>
+  p {color: red; }
+  
+</style>
 Realizamos as montagens das rotas:</br>
 routes.get('/', (request, response) => response.render(views + 'index'))</br>
 // quando for o metodo get no barra. quero que no segundo argumento execute uma função de novo</br>
@@ -15,6 +20,8 @@ routes.post('/job', (request, response) => {</br>
   Utilizamos o motor EJS para poder manipular nosso javascript diretamente dentro da html
   </br>
   Realizei a instalação do Nodemon também para poder riniciar o servidor automaticamente após salvar o projeto, assim facilita possibilita mais agilidade na construção do projeto
+  
+  
   
   
   
