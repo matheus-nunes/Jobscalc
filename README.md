@@ -5,7 +5,7 @@ Este projeto foi Utilizado Node: Express, Ejs
 Configuramos o servidor na porta: 3000
 </br>
 
-<p style="color: red;">
+<p style="background-color:red;">
 Realizamos as montagens das rotas:</br>
 routes.get('/', (request, response) => response.render(views + 'index'))</br>
 // quando for o metodo get no barra. quero que no segundo argumento execute uma função de novo</br>
